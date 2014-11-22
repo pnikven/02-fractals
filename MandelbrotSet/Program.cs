@@ -27,7 +27,7 @@ namespace MandelbrotSet
 
     class MandelbrotSet
     {
-        private const int IterationCount = 1000;
+        private const int IterationCount = 100;
 
 
         public static bool CheckPoint(double R, double I)
@@ -36,7 +36,7 @@ namespace MandelbrotSet
             for (int i = 0; i < IterationCount; i++)
             {
                 if (cR*cR + cI*cI > 4) return false;
-                double tR = cR*cR - cI*cI + R;
+                double tR = cR*cR + cI*cI + R;
                 double tI = 2 * cR * cI + I;
                 cR = tR;
                 cI = tI;
